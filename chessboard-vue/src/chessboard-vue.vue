@@ -38,23 +38,26 @@ export default {
         { name: "2"},
         { name: "1"},
       ],
-      board: []
+      board: [],
+      color: "light",
     }
   },
   methods: {
-    // initBoard() {
-    //   for(let i = 0; i < this.files.length; i++) {
-    //     for(let j = 0; j < this.ranks.length; j++) {
-    //       this.board.push(this.files[i].name + this.ranks[j].name);
-    //     }
-    //   }
-    // },
-    // loadBoard() {
-    //   this.initBoard();
-    // }
+    initBoard() {
+      for(let i = 0; i < this.files.length; i++) {
+        for(let j = 0; j < this.ranks.length; j++) {
+          this.board.push({name: this.files[i] + this.ranks[j], color: this.color});
+          this.color = this.color === "light" ? "dark" : "light";
+        }
+      }
+    },
+    loadBoard() {
+      this.initBoard();
+      // console.log(this.board); 
+    }
   },
   created() {
-    // this.loadBoard();
+    this.loadBoard();
   }
 
 };
