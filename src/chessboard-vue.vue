@@ -18,26 +18,8 @@ export default {
   },
   data() {
     return {
-      files: [
-        { name: "a"},
-        { name: "b"},
-        { name: "c"},
-        { name: "d"},
-        { name: "e"},
-        { name: "f"},
-        { name: "g"},
-        { name: "h"},
-      ],
-      ranks: [
-        { name: "8"},
-        { name: "7"},
-        { name: "6"},
-        { name: "5"},
-        { name: "4"},
-        { name: "3"},
-        { name: "2"},
-        { name: "1"},
-      ],
+      files: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'],
+      ranks: ['8', '7', '6', '5', '4', '3', '2', '1'],
       board: [],
       color: "light",
     }
